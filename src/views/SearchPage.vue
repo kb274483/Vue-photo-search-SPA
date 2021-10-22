@@ -120,7 +120,7 @@
         }
         .searchBtn{
             position: relative; 
-            left: -5px; top:1px;
+            left: -5px; top:-1px;
             width:100px; height: 40px;
             border-radius: 0px 25px 25px 0px ;
             background-color: rgb(252, 183, 73);
