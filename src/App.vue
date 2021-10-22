@@ -90,11 +90,13 @@
                 <DropdownItem>
                   <a href="https://github.com/kb274483" 
                     target="_blank" >
-                    <Icon type="logo-github" class="github"/>
+                    <Icon type="logo-github" class="github" size="20"/>
                   </a>
                 </DropdownItem>
                 <DropdownItem>
-                  <button class="modeSwitch">mode</button>
+                  <button class="modeSwitch" @click="modeSwitch">
+                    <Icon type="md-contrast" size="20" class="modeIcon light"/>
+                  </button>
                 </DropdownItem>
             </DropdownMenu>
           </Dropdown>
@@ -219,6 +221,9 @@
     .modeIcon{
       transition: all linear 0.5s;
     }
+    @media (max-width: 800px) {
+      margin-left: 0px;
+    }
   }
   .light{
     transform: rotate(0deg);
@@ -235,8 +240,10 @@
   .RwdMenu{
     display: none;
     justify-content: space-between;
+    background-color: var(--BgColor);
+    height: 55px;
     .line{
-      background-color:#384759;
+      background-color:var(--TextColor);
       height: 3px;
       width: 30px;
       margin: 5px;
@@ -247,6 +254,9 @@
       text-align: center;
       letter-spacing: 2px;
       padding: 10px;
+      a{
+        color: #171826;
+      }
     }
     .github{
       margin-left: 0px;

@@ -86,6 +86,7 @@
         background-color: var(--BgColor);
     }
     .searchPart{
+        margin: 0 auto;
         padding: 130px;
         display: flex;
         justify-content: center;
@@ -153,7 +154,7 @@
 
     @media(max-width: 550px ){
         .searchPart{
-            padding: 40px;
+            padding: 40px 50px; 
         }
         .searchBoxContainer{
             .searchBox{

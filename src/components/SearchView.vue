@@ -31,7 +31,6 @@ export default {
     watch:{
         searchresult:function(data){
           this.renderData = data ;
-          // console.log(this.renderData);
         },
 
         resdata:function(data){
@@ -42,7 +41,6 @@ export default {
       download(){
         alert(`Avoid copyright disputes. This function is for reference only`);
       },
-
       scaleImg(e){
         this.renderData.forEach(item => {
             if(e.target.src === item.urls.regular){
@@ -86,27 +84,27 @@ export default {
               <Button @click="modal5 = true"><Icon type="md-information-circle"/>EXIF</Button>
               <Modal v-model="modal5" title="Exif infomation" width="650" footer-hide>
                 <div class="exif">
-                  <Row type="flex" justify="center" align="middle" >
+                  <Row type="flex" justify="center" align="middle" :gutter="5" >
                     <Col :sm="8">
-                      <span>Camera Make <br> 【{{exif.make}}】</span>
+                      <span>Camera Make <br>【{{exif.make}}】</span>
                     </Col>
                     <Col :sm="8">
-                      <span>Camera Model <br> 【{{exif.model}}】</span>
+                      <span>Camera Model <br>【{{exif.model}}】</span>
                     </Col>
                     <Col :sm="8">
-                      <span>Focal Length <br> 【{{exif.focal_length}}】</span>
+                      <span>Focal Length <br>【{{exif.focal_length}}】</span>
                     </Col>
                   </Row>
                   <br> 
-                  <Row type="flex" justify="center" align="middle" >
-                    <Col :sm="8">
-                      <span>Aperture <br> 【<Icon type="md-aperture"/>{{exif.aperture}}】</span>
+                  <Row type="flex" justify="center" align="middle" :gutter="10" >
+                    <Col :sm="8" offset="-2">
+                      <span>Aperture <br>【<Icon type="md-aperture"/>{{exif.aperture}}】</span>
                     </Col>
                     <Col :sm="8">
-                      <span>Shutter Speed <br> 【{{exif.exposure_time}}s】</span>
+                      <span>Shutter Speed <br>【{{exif.exposure_time}}s】</span>
                     </Col>
                     <Col :sm="8">
-                      <span>ISO <br> 【{{exif.iso}}】</span>
+                      <span>ISO <br>【{{exif.iso}}】</span>
                     </Col>
                   </Row>
                 </div>
@@ -123,6 +121,9 @@ export default {
   .searchResultContainer{
     margin: 50px 30px;
     overflow: hidden;
+    @media (max-width:500px) {
+      margin: 20px 0px 20px 0px;
+    }
   }
   .col{
     margin: 5px;
@@ -148,12 +149,5 @@ export default {
       justify-content: space-between;
     }
   }
-  .ivu-modal-wrap{
-    top: -80px !important;
-  }
-  .ivu-modal-content{
-    background-color: var(--BgColor) !important; 
-  }
-  
 </style>
   
