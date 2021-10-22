@@ -8,7 +8,7 @@ import axios from "axios"
     },
     async mounted(){
       let that = this ;
-      await axios.get('https://api.unsplash.com/photos/random?client_id=bKFaiEZpPA7eGovGXxXcSGe2KUo2ZUGe0qBzaOUFLZo',{
+      await axios.get('https://api.unsplash.com/photos/random?client_id=bKFaiEZpPA7eGovxXcSGe2KUo2ZUGeqBzaOUFLZo',{
         params:{
           count : 8 ,
           orientation: "squarish",
