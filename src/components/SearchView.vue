@@ -28,7 +28,6 @@ export default {
             }
         }
     },
-
     watch:{
         searchresult:function(data){
           this.renderData = data ;
@@ -39,7 +38,6 @@ export default {
           this.renderData = data;
         },
     },
-
     methods:{
       download(){
         alert(`Avoid copyright disputes. This function is for reference only`);
@@ -140,6 +138,7 @@ export default {
     }
   }
   .scaleImgBox{
+    margin-bottom: 50px;
     img{
       width:100%; height:100%;      
     }
@@ -148,6 +147,12 @@ export default {
       flex-wrap: wrap;
       justify-content: space-between;
     }
+  }
+  .ivu-modal-wrap{
+    top: -80px !important;
+  }
+  .ivu-modal-content{
+    background-color: var(--BgColor) !important; 
   }
   
 </style>

@@ -36,12 +36,7 @@
             createKeyword(){
                 this.keywordForSearch = this.keywords;
                 this.keywords = '';
-                if(this.keywordForSearch != ''){
-                    this.getApiData();
-                }else{
-                    alert("You need to type something...");
-                }
-                
+                this.keywordForSearch != '' ? this.getApiData(): alert("You need to type something...")  
             },
 
             getApiData(){
@@ -87,11 +82,14 @@
 </template>
 
 <style lang="scss" scoped>
+    .albumContainer{
+        background-color: var(--BgColor);
+    }
     .searchPart{
         padding: 130px;
         display: flex;
         justify-content: center;
-        background-image: url("https://images.unsplash.com/photo-1474874055390-459bc92357f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1446&q=80");
+        background: var(--url);
         background-size: cover;
         background-position:center;
     }
@@ -122,7 +120,7 @@
         }
         .searchBtn{
             position: relative; 
-            left: -5px; top:-1px;
+            left: -5px; top:1px;
             width:100px; height: 40px;
             border-radius: 0px 25px 25px 0px ;
             background-color: rgb(252, 183, 73);
